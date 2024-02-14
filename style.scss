@@ -1,64 +1,93 @@
+$color_1: rgb(66, 63, 63);
+$color_2: #fff;
+$font-family_1: -apple-system, BlinkMacSystemFont, sans-serif;
+$background-color_1: #fff; //container background
+$background-color_2: #87e7a5; //add task btn
+$background-color_3: #f9f9f9; //default list element background
+$background-color_4: #e9e9e9; //on hover list background
+$background-color_5: #f44336; //delete button
+$background-color_6: #265073; //all button
+$background-color_7: #adbc9f; //completed button
+$background-color_8: #c68484; //active button
+$background-color_9: #ff8080; //clear button
+
 @keyframes gradient {
   0% {
     background-position: 0% 0%;
   }
+
   50% {
     background-position: 100% 100%;
   }
+
   100% {
     background-position: 0% 0%;
   }
 }
+
 @keyframes wave {
   2% {
     transform: translateX(1);
   }
+
   25% {
     transform: translateX(-25%);
   }
+
   50% {
     transform: translateX(-50%);
   }
+
   75% {
     transform: translateX(-25%);
   }
+
   100% {
     transform: translateX(1);
   }
 }
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-*:focus {
-  outline: none;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 body {
   margin: auto;
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: $font-family_1;
   overflow: auto;
-  background: linear-gradient(315deg, rgb(101, 0, 94) 3%, rgb(60, 132, 206) 38%, rgb(48, 238, 226) 68%, rgb(255, 25, 25) 98%);
+  background: linear-gradient(
+    315deg,
+    rgba(101, 0, 94, 1) 3%,
+    rgba(60, 132, 206, 1) 38%,
+    rgba(48, 238, 226, 1) 68%,
+    rgba(255, 25, 25, 1) 98%
+  );
   animation: gradient 15s ease infinite;
   background-size: 400% 400%;
   background-attachment: fixed;
-}
-body::-webkit-scrollbar {
-  display: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .container {
   max-width: 600px;
   margin: 50px auto;
   padding: 20px;
-  background-color: #fff;
+  background-color: $background-color_1;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
   text-align: center;
-  color: rgb(66, 63, 63);
+  color: $color_1;
   padding-bottom: 5%;
 }
 
@@ -67,7 +96,7 @@ form {
   margin-bottom: 20px;
 }
 
-input[type=text] {
+input[type="text"] {
   flex: 1;
   padding: 10px;
   font-size: 16px;
@@ -78,8 +107,8 @@ input[type=text] {
 .add-task {
   padding: 10px 30px;
   font-size: 16px;
-  background-color: #87e7a5;
-  color: #fff;
+  background-color: $background-color_2;
+  color: $color_2;
   border: none;
   border-radius: 5px 5px;
   cursor: pointer;
@@ -93,19 +122,20 @@ ul {
 
 li {
   padding: 15px 10px;
-  background-color: #f9f9f9;
+  background-color: $background-color_3;
   border-bottom: 1px solid #ddd;
   transition: background-color 0.3s;
   overflow: scroll;
-}
-li:hover {
-  background-color: #e9e9e9;
+
+  &:hover {
+    background-color: $background-color_4;
+  }
 }
 
 .delete-btn {
   float: right;
-  background-color: #f44336;
-  color: #fff;
+  background-color: $background-color_5;
+  color: $color_2;
   border: none;
   padding: 5px 10px;
   border-radius: 5px;
@@ -118,9 +148,10 @@ li:hover {
 
 .filter-buttons {
   margin-bottom: 20px;
-}
-.filter-buttons button {
-  margin-right: 10px;
+
+  button {
+    margin-right: 10px;
+  }
 }
 
 #allTasksBtn,
@@ -129,30 +160,29 @@ li:hover {
 #clearCompletedBtn {
   padding: 10px 20px;
   font-size: 16px;
-  color: #fff;
+  color: $color_2;
   border: none;
   border-radius: 5px 5px;
   cursor: pointer;
 }
-
 #allTasksBtn {
-  background-color: #265073;
+  background-color: $background-color_6;
 }
 
 #completedTasksBtn {
-  background-color: #adbc9f;
+  background-color: $background-color_7;
 }
 
 #yetToBeDoneTasksBtn {
-  background-color: #c68484;
+  background-color: $background-color_8;
 }
 
 #clearCompletedBtn {
-  background-color: #ff8080;
+  background-color: $background-color_9;
 }
 
 .wave {
-  background: rgba(255, 255, 255, 0.25);
+  background: rgb(255 255 255 / 25%);
   border-radius: 1000% 1000% 0 0;
   position: fixed;
   width: 200%;
@@ -163,14 +193,16 @@ li:hover {
   bottom: 0;
   left: 0;
   z-index: -1;
+
+  &:nth-of-type(2) {
+    bottom: -1.25em;
+    animation: wave 18s linear reverse infinite;
+    opacity: 0.8;
+  }
+
+  &:nth-of-type(3) {
+    bottom: -2.5em;
+    animation: wave 20s -1s reverse infinite;
+    opacity: 0.9;
+  }
 }
-.wave:nth-of-type(2) {
-  bottom: -1.25em;
-  animation: wave 18s linear reverse infinite;
-  opacity: 0.8;
-}
-.wave:nth-of-type(3) {
-  bottom: -2.5em;
-  animation: wave 20s -1s reverse infinite;
-  opacity: 0.9;
-}/*# sourceMappingURL=style.css.map */

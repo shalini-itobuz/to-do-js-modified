@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Handle form submission
+    // Form submission
     taskForm.addEventListener('submit', function(e) {
         e.preventDefault();
         const task = taskInput.value.trim();
