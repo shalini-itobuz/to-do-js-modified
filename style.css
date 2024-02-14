@@ -49,7 +49,7 @@ input[type="text"] {
 }
 
 .add-task {
-  padding: 10px 40px;
+  padding: 10px 30px;
   font-size: 16px;
   background-color: #87e7a5;
   color: #fff;
@@ -68,6 +68,7 @@ li {
   background-color: #f9f9f9;
   border-bottom: 1px solid #ddd;
   transition: background-color 0.3s;
+  overflow: scroll;
 }
 
 li:hover {
@@ -82,6 +83,7 @@ li:hover {
   padding: 5px 10px;
   border-radius: 5px;
   cursor: pointer;
+
 
 }
 
