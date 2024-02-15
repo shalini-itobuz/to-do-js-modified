@@ -181,6 +181,23 @@ li {
   background-color: $background-color_peach;
 }
 
+.container {
+  position: relative;
+}
+
+ul#taskList {
+  max-height: 500px;
+  overflow-y: auto;
+  padding-right: 15px;
+}
+
+.filter-buttons {
+  position: sticky;
+  top: 20px;
+  background-color: #fff;
+  z-index: 1;
+}
+
 .wave {
   background: rgb(255 255 255 / 25%);
   border-radius: 1000% 1000% 0 0;
