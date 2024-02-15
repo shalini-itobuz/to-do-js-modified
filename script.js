@@ -1,4 +1,3 @@
-
 const taskForm = document.getElementById('taskForm');
 const taskInput = document.getElementById('taskInput');
 const taskList = document.getElementById('taskList');
@@ -127,4 +126,3 @@ clearCompletedBtn.addEventListener('click', function () {
     localStorage.setItem('tasks', JSON.stringify(updatedTasks));
     loadTasks();
 });
-

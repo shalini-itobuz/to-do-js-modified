@@ -1,15 +1,15 @@
-$color_1: rgb(66, 63, 63);
-$color_2: #fff;
+$color_grey: rgb(66, 63, 63);
+$color_white: #fff;
 $font-family_1: -apple-system, BlinkMacSystemFont, sans-serif;
-$background-color_1: #fff; //container background
-$background-color_2: #87e7a5; //add task btn
-$background-color_3: #f9f9f9; //default list element background
-$background-color_4: #e9e9e9; //on hover list background
-$background-color_5: #f44336; //delete button
-$background-color_6: #265073; //all button
-$background-color_7: #adbc9f; //completed button
-$background-color_8: #c68484; //active button
-$background-color_9: #ff8080; //clear button
+$background-color_white: #fff; //container background
+$background-color_aqua: #87e7a5; //add task btn
+$background-color_pureWhite: #f9f9f9; //default list element background
+$background-color_offwhite: #e9e9e9; //on hover list background
+$background-color_red: #f44336; //delete button
+$background-color_blue: #265073; //all button
+$background-color_olive: #adbc9f; //completed button
+$background-color_rust: #c68484; //active button
+$background-color_peach: #ff8080; //clear button
 
 @keyframes gradient {
   0% {
@@ -81,13 +81,13 @@ body {
   max-width: 600px;
   margin: 50px auto;
   padding: 20px;
-  background-color: $background-color_1;
+  background-color: $background-color_white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
   text-align: center;
-  color: $color_1;
+  color: $color_grey;
   padding-bottom: 5%;
 }
 
@@ -107,8 +107,8 @@ input[type="text"] {
 .add-task {
   padding: 10px 30px;
   font-size: 16px;
-  background-color: $background-color_2;
-  color: $color_2;
+  background-color: $background-color_aqua;
+  color: $color_white;
   border: none;
   border-radius: 5px 5px;
   cursor: pointer;
@@ -122,20 +122,20 @@ ul {
 
 li {
   padding: 15px 10px;
-  background-color: $background-color_3;
+  background-color: $background-color_pureWhite;
   border-bottom: 1px solid #ddd;
   transition: background-color 0.3s;
   overflow: scroll;
 
   &:hover {
-    background-color: $background-color_4;
+    background-color: $background-color_offwhite;
   }
 }
 
 .delete-btn {
   float: right;
-  background-color: $background-color_5;
-  color: $color_2;
+  background-color: $background-color_red;
+  color: $color_white;
   border: none;
   padding: 5px 10px;
   border-radius: 5px;
@@ -160,25 +160,25 @@ li {
 #clearCompletedBtn {
   padding: 10px 20px;
   font-size: 16px;
-  color: $color_2;
+  color: $color_white;
   border: none;
   border-radius: 5px 5px;
   cursor: pointer;
 }
 #allTasksBtn {
-  background-color: $background-color_6;
+  background-color: $background-color_blue;
 }
 
 #completedTasksBtn {
-  background-color: $background-color_7;
+  background-color: $background-color_olive;
 }
 
 #yetToBeDoneTasksBtn {
-  background-color: $background-color_8;
+  background-color: $background-color_rust;
 }
 
 #clearCompletedBtn {
-  background-color: $background-color_9;
+  background-color: $background-color_peach;
 }
 
 .wave {
