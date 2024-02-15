@@ -191,6 +191,15 @@ ul#taskList {
   padding-right: 15px;
 }
 
+ul#taskList::-webkit-scrollbar {
+  background-color: pink;
+  width: 12px;
+}
+ul#taskList::-webkit-scrollbar-thumb {
+  background: rgb(223, 166, 223);
+  border-radius: 50px;
+}
+
 .filter-buttons {
   position: sticky;
   top: 20px;
